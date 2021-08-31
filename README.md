@@ -34,6 +34,6 @@ Number of rows matter versus size of dataset
 
 **Presentation:**
 
-To do:
+### To do:
 - Explore what direction we want to have
 - What data do we want to use?
