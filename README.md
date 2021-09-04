@@ -22,7 +22,7 @@
 **Individual Branches**
 - Alysia Won's Branch Name: alysia-won
 - Bala Bandna's Branch Name: BalaBanda
-- Frank Sun's Branch Name: 
+- Frank Sun's Branch Name: frank-sun
 - Steve Macpherson's Branch Name: smacpherson
 
 ## Machine Learning
