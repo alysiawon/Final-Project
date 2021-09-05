@@ -6,7 +6,7 @@
 
 **Topic:** Olympic Medal Predictor 
 
-**Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals.
+**Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing the historical statistics of different countries such as population, GDP and GDP per capita to see if this can impact the likelihood that a country will win more medals.
 
 **Description of Data Source:** The three sources of data we will be utilizing is:
 1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic
