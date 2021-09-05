@@ -28,3 +28,8 @@
 ## Machine Learning
 
 ## Database
+The data will be split into three tables: the main medalists table that will contain the athletes and their stats, and two supporting tables sport and country. In order to ensure primary keys are unique we will assign an athlete_code comprised of athlete_name/country_code/year concatenated. We will assign an event code using event_name/year concatenated.
+
+![ERD](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERD.png)
+
+![ERDtables](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERDtables.PNG)
