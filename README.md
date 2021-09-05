@@ -8,10 +8,16 @@
 
 **Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals.
 
-**Description of Data Source:** The three sources of data we will be utilizing is:
-1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic. This will be completed by merging the <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic data</a> with the more recent <a href="Resources/2021 Olympics">2020 Olympic</a>.
-2. Country Data, such as <a href="Resources/World Population">population</a> and <a href="Resources/World GDP">GDP</a>
-3. Event Data, such as event name and gold medalist name. This will be completed by creating a separate DataFrame from the <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic data</a> and <a href="Resources/2021 Olympics">2020 Olympic data</a>.
+**Description of Data Source:** By utilizing various dataset, the three outputs we would like to have is:
+1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic. This will be completed by merging the 1896 to 2016 Olympic data with the more recent 2020 Olympic.
+2. Country Data, such as population and GDP.
+3. Event Data, such as event name and gold medalist name. This will be completed by creating a separate DataFrame from the 1896 to 2016 Olympic data and the 2020 Olympic data.
+
+This will be completed by utiliizing the following datasets:
+- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
+- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
+- <a href="Resources/World Population">World Population</a>
+- <a href="Resources/World GDP">World GDP</a>
 
 **Questions To Answer With The Data Source:** What criteria makes a country more likely to win medals?
 
