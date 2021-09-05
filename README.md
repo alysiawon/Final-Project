@@ -21,7 +21,7 @@ This will be completed by utiliizing the following datasets:
 
 **Questions To Answer With The Data Source:** Based on the dataset, what criteria makes a country more likely to win medals in Olympics?
 
-**Data Exploration:** Data cleaning and wrangling
+**Data Exploration:** Data cleaning and wrangling.
 
 ## Github
 
@@ -40,7 +40,6 @@ Our Machine Learning model will focus on predicting how many medals a country wi
 The model will be a continous regressionn model.
 
 ## Database
-
 
 ### After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
