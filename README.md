@@ -19,7 +19,9 @@ This will be completed by utiliizing the following datasets:
 - <a href="Resources/World Population">World Population</a>
 - <a href="Resources/World GDP">World GDP</a>
 
-**Questions To Answer With The Data Source:** What criteria makes a country more likely to win medals?
+**Questions To Answer With The Data Source:** Based on the dataset, what criteria makes a country more likely to win medals in Olympics?
+
+**Data Exploration:** Data cleaning and wrangling
 
 ## Github
 
@@ -38,13 +40,13 @@ Our Machine Learning model will focus on predicting how many medals a country wi
 The model will be a continous regressionn model.
 
 ## Database
-<<<<<<< HEAD
 
-## After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
-=======
+
+### After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
+
 The data will be split into three tables: the main medalists table that will contain the athletes and their stats, and two supporting tables sport and country. In order to ensure primary keys are unique we will assign an athlete_code comprised of athlete_name/country_code/year concatenated. We will assign an event code using event_name/year concatenated.
 
 ![ERD](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERD.png)
 
 ![ERDtables](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERDtables.PNG)
->>>>>>> 1eb367cb371d547f499566ff152080a7b3a0d463
+
