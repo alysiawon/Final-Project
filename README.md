@@ -40,7 +40,7 @@ The model will be a continous regressionn model.
 ## Database
 <<<<<<< HEAD
 
-After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
+## After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 =======
 The data will be split into three tables: the main medalists table that will contain the athletes and their stats, and two supporting tables sport and country. In order to ensure primary keys are unique we will assign an athlete_code comprised of athlete_name/country_code/year concatenated. We will assign an event code using event_name/year concatenated.
 
