@@ -6,7 +6,11 @@
 
 **Topic:** Olympic Medal Predictor 
 
+<<<<<<< HEAD
+**Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals.
+=======
 **Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing country statistics such as population, GDP and GDP per capita to see if this can impact the likelihood that a country will win more medals.
+>>>>>>> 7d0de9a4b65ffd6c8df04d23d1410deccf2b14db
 
 **Description of Data Source:** By utilizing various dataset, the three outputs we would like to have is:
 1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic. This will be completed by merging the 1896 to 2016 Olympic data with the more recent 2020 Olympic.
@@ -19,9 +23,13 @@ This will be completed by utiliizing the following datasets:
 - <a href="Resources/World Population">World Population</a>
 - <a href="Resources/World GDP">World GDP</a>
 
+<<<<<<< HEAD
+**Questions To Answer With The Data Source:** What criteria makes a country more likely to win medals?
+=======
 **Questions To Answer With The Data Source:** Based on the dataset, what criteria makes a country more likely to win medals in Olympics?
 
 **Data Exploration:** Data cleaning and wrangling.
+>>>>>>> 7d0de9a4b65ffd6c8df04d23d1410deccf2b14db
 
 ## Github
 
@@ -29,6 +37,21 @@ This will be completed by utiliizing the following datasets:
 
 **Individual Branches**
 - Alysia Won's Branch Name: alysia-won
+<<<<<<< HEAD
+- Bala Bandna's Branch Name: BalaBanda
+- Frank Sun's Branch Name: frank-sun
+- Steve Macpherson's Branch Name: smacpherson
+
+## Machine Learning
+
+Our Machine Learning model will focus on predicting how many medals a country will win based on a country's GDP and population.
+
+The model will be a continous regressionn model.
+
+## Database
+
+After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
+=======
 - Bala Banda's Branch Name: BalaBanda
 - Frank Sun's Branch Name: frank-sun
 - Steve Macpherson's Branch Name: smacpherson
@@ -63,3 +86,4 @@ Using the following data sets 120 years of olympics, worldwide GDP History and P
 8. In the last step we visualize the results of the Random Classification model on a graph.
 
 In our conclusion we aim to determine if our predictive model is accurate by comparing the results to the 2021 Tokyo olympic dataset to determine the accuracy of our model in the hopes that the stakeholders will be able to make more informed decisions to increase the likelihood of their country winning more medals.
+>>>>>>> 7d0de9a4b65ffd6c8df04d23d1410deccf2b14db
