@@ -1,0 +1,11 @@
+CREATE TABLE athletes (
+	id SERIAL,
+	Name VARCHAR,
+	Sex VARCHAR,
+	NOC VARCHAR NOT NULL,
+	Year INT NOT NULL,
+	Sport VARCHAR,
+	Event VARCHAR,
+	Medal VARCHAR 
+);
+
