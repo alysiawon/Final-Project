@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Olympic Medal Predictor</title>
+
+        <!-- Plotly -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
+        <!-- Leafleft CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+
+        <!-- Leafleft JavaScript-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+        <!-- JQuery-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- D3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="static/css/style.css"> 
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"/>
+        
+
+        <!-- Navigation Bar -->
+        <div class="wrapper">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">Olympic Medal Predictor</a>
+                <a class="navbar-brand" href="index.html">Olympic History</a>
+              </nav>
+        </div>
+
+        <!-- Header -->
+        <section id="medals">
+            <div class=container>
+                <div class ="info">
+                <h1 class="display-4">Olympic Medal Predictor</h1>
+                <p>...</p>
+                <p><a class = "btn btn-primary btn-lg" href="#" role="button">Learn More</a></p>
+                </div>
+            </div>
+            <!-- </div> -->
+        </section>
+    </head>
+
+    <body style="background-color: #FAFAFA;">
+
+        <!----------------- MEDAL PREDICTOR ----------------->
+        
+        <!-- Intro -->
+        <div class="jumbotron" class="container-fluid">
+            <h1 class="display-4">Olympic Medal Predictor</h1>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Olympic Predictor <br><small>Small Text</small></h3>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                    INSERT TEXT
+                    </p>
+                </div>
+            </div>
+          </div>
+
+        <!-- Input Button -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Input Your Filters</h3>
+                    <form class="w3-container" style="background-color: #E8E4D6;" padding=20>
+                        <ul>
+                            <br>
+                            <label for="number">Enter GDP</label>
+                            <input type="number" placeholder=12345 id="gdp"/>
+                            <br>
+                            <label for="number">Enter Population</label>
+                            <input type="number" placeholder="12345" id="population"/>
+                            <button id="filter-btn" type="button" class="btn btn-default">Predict Olympic Rank</button> 
+                        </ul>
+                   </form>
+                   <br>
+
+                </div>
+
+        <!-- Table -->
+                <div class="col-md-9" >
+                    <h3>Rank </h3>
+
+                    <div style="background-color: #E8E4D6;" padding=20>
+                        <br><small>Small Text</small>
+                        <p>
+                            INSERT TEXT
+                        </p>
+                   </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!----------------- HISTORY ----------------->
+
+        <!-- Intro -->
+        <div class="jumbotron">
+            <div class=container></div>
+            <h1 class="display-4">Olympic History</h1>
+        </div>
+
+
+          <br>
+        <!-- Input Button -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Input Your Filters</h3>
+                    <form class="w3-container" style="background-color: #E8E4D6;" padding=20>
+                        <ul>
+                            <br>
+                            <label for="date">Enter Year</label>
+                            <input type="number" placeholder=2020 id="year" />
+                            <!-- <label for="country">Enter a Country</label>
+                            <input type="text" placeholder="Canada" id="country_name" />
+                            <br>
+                            <label for="country">Enter a 3 Letter Country Code</label>
+                            <input type="text" placeholder="CAN" id="country_code" /> -->
+                            <button id="filter-btn" type="button" class="btn btn-default">Find Olympic Data</button> 
+                        </ul>
+                   </form>
+                   <br>
+                   <div style="background-color: #E8E4D6;" padding=20>
+                        <h3>Olympic History <br><small>Small Text</small></h3>
+                        <p>
+                            INSERT TEXT
+                        </p>
+                   </div>
+                </div>
+
+        <!-- Table -->
+                <div class="col-md-9" >
+
+                    <h3>Olympic Table</h3>
+                    <table id="table-head">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Country Name</th>
+                                <th>Country Code</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>GDP</th>
+                                <th>Population</th>
+                                <th>Gold Medals</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body"></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <!-- Bar Graph -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Bar Graph</h2>
+                    <div id="bar-plot"></div>
+                </div>
+            </div>
+        </div>    
+
+        <br>
+        <br>
+
+        <!-- Map -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>World Map</h3>
+                    <div id='description'>Hover over thet data to find history of olympics.</div>
+                    <div id="mapid" style = "width:80%; height:580px;"></div>
+                </div>
+            </div>
+        </div>    
+        
+        <!-- Medals Data -->
+        <script src="static/js/medals.js" type="text/javascript"></script>      
+        
+        <script src="static/js/medalstest.js" type="text/javascript"></script>      
+
+        <script src="data/samples.json"></script>
+
+        <!-- API key -->
+        <script src="static/js/config.js" type="text/javascript"></script>
+    
+        <!-- JavaScript -->
+        <script src="static/js/logic.js" type="text/javascript"></script>       
+
+    </body> 
+</html>
+
