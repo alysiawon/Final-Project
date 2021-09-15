@@ -63,3 +63,11 @@ Using the following data sets 120 years of olympics, worldwide GDP History and P
 8. In the last step we visualize the results of the Random Classification model on a graph.
 
 In our conclusion we aim to determine if our predictive model is accurate by comparing the results to the 2021 Tokyo olympic dataset to determine the accuracy of our model in the hopes that the stakeholders will be able to make more informed decisions to increase the likelihood of their country winning more medals.
+
+### Machine Learning Model
+1. Model Chosen: Linear Regression Model.
+2. Traninig the Model:
+   - Total medals assigned to y.
+   - GDP and population are assigned to X.
+   - Model Accuracy 68%.
+
