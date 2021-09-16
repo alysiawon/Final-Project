@@ -23,6 +23,8 @@ This will be completed by utiliizing the following datasets:
 
 **Data Exploration:** Data cleaning and wrangling.
 
+**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the link.</a>.
+
 ## Github
 
 **Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
