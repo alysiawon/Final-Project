@@ -56,6 +56,8 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 - What would your rank be based on the 2020 Olympics?
 - A table to show where you would be ranked
 
+Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a>.
+
 ### Olympic History
 
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
