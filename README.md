@@ -6,20 +6,20 @@
 
 **Topic:** Olympic Medal Predictor 
 
-**Why This Topic:** The purpose of this project is to see what criteria will make a country more likely to win medals. We will be comparing country statistics such as population, GDP and GDP per capita to see if this can impact the likelihood that a country will win more medals.
+**Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals. 
 
 **Description of Data Source:** By utilizing various dataset, the three outputs we would like to have is:
 1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic. This will be completed by merging the 1896 to 2016 Olympic data with the more recent 2020 Olympic.
 2. Country Data, such as population and GDP.
-3. Event Data, such as event name and gold medalist name. This will be completed by creating a separate DataFrame from the 1896 to 2016 Olympic data and the 2020 Olympic data.
 
 This will be completed by utiliizing the following datasets:
 - <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
 - <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
 - <a href="Resources/World Population">World Population</a>
 - <a href="Resources/World GDP">World GDP</a>
+- <a href="Resources/World Coordinates">World Coordinates</a>
 
-**Questions To Answer With The Data Source:** Based on the dataset, what criteria makes a country more likely to win medals in Olympics?
+**Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
 **Data Exploration:** Data cleaning and wrangling.
 
@@ -37,11 +37,31 @@ This will be completed by utiliizing the following datasets:
 
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
-The data will be split into three tables: the main medalists table that will contain the athletes and their stats, and two supporting tables sport and country. In order to ensure primary keys are unique we will assign an athlete_code comprised of athlete_name/country_code/year concatenated. We will assign an event code using event_name/year concatenated.
+The data that has been created is:
+1. Olympic History Data showcasing country name, country code, GDP, population and gold medals won
+2. 2020 Olympic Data showcasing only 2020 Olympic Data
+3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
 
-![ERD](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERD.png)
 
-![ERDtables](https://github.com/alysiawon/Final-Project/blob/smacpherson/DB/ERDtables.PNG)
+## Dashboard
+
+In our dashboard, we will be highlighting two key items:
+1. Olympic Gold Medal Predictor
+2. Olympic History
+
+### Olympic Gold Medal Predictor
+
+The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
+- How many medals will you win?
+- What would your rank be based on the 2020 Olympics?
+- A table to show where you would be ranked
+
+### Olympic History
+
+The purpose of this section is to let the user select a previous Olympic year and our system will populate:
+- A table to show where you would be ranked
+- A bar graph to visualize the table
+- A map to showcase the country with the most medals
 
 ## Machine Learning 
 
