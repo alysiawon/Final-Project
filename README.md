@@ -21,12 +21,16 @@ The two outputs we would like to have is:
 1. Gold Medalist Data with Country Data 
 2. 2020 Olympic Data
 
-This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>:
-- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
-- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
-- <a href="Resources/World Population">World Population</a>
-- <a href="Resources/World GDP">World GDP</a>
-- <a href="Resources/World Coordinates">World Coordinates</a>
+This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>. The links below will showcase where we received our data:
+
+- <a href="https://www.kaggle.com/mysarahmadbhat/120-years-of-olympic-history">1896 to 2016 Olympic Data</a>
+- <a href="https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo">2020 Olympic Data</a>
+- <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD">World GDP</a>
+- <a href="https://www.kaggle.com/themlphdstudent/countries-population-from-1955-to-2020">World Population</a>
+- <a href="https://gist.github.com/radcliff/f09c0f88344a7fcef373">Country Code</a>
+- <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
+
+
 
 ## 3. Data Cleaning
 
@@ -68,12 +72,16 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 - What would your rank be based on the 2020 Olympics?
 - A table to show where you would be ranked
 
+The predictor utilizes the data from Table 1 and 2 to complete this section. 
+
 ### Olympic History
 
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
 - A table to show where you would be ranked
 - A bar graph to visualize the table
 - A map to showcase the country with the most medals
+
+The predictor utilizes the data from Table 3 to complete this section. 
 
 ### Process of Creating The Dashboard
 
