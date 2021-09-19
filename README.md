@@ -45,13 +45,14 @@ The data that has been created is:
 3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
 
 ## Dashboard
-<img align="right" src="Analysis/dashboard.png" width="250">
 
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
 
 Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a>.
+
+<img align="right" src="Analysis/dashboard.png" width="250">
 
 ### Olympic Gold Medal Predictor
 
