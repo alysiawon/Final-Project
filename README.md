@@ -47,19 +47,20 @@ This will be completed by utilizing <a href="Resources">datasets located in the 
 ### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
+<img align="right" src="Database/ERD.png" width="250">
+
 ### Cleaned Data Source
 Our team cleaned and merged the data utilizing Pandas and SQL to produce <a href="Data">new datasets located in the Data folder</a>:
-1. Olympic History Data showcasing country name, country code, GDP, population and gold medals won
-<br><a href="Data/country.ipynb">Country Information</a>
+1. **Table 1:** Olympic History Data showcasing country name, country code, GDP, population and gold medals won
+<br><a href="Data/country.ipynb">Cleaned Country Information</a>
 <br><a href="Data/country.csv">Country Information CSV File</a>
 
-2. 2020 Olympic Data showcasing only 2020 Olympic Data
-<br><a href="Data/cleaned_data.ipynb">2020 Olympic Information</a>
+2. **Table 2:** 2020 Olympic Data showcasing only 2020 Olympic Data
+<br><a href="Data/cleaned_data.ipynb">Cleaned 2020 Olympic Information</a>
 <br><a href="Data/Athlete+GDP&Population.csv">2020 Olympic Information CSV File</a>
 
-
-3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
-<br><a href="Data/medals.ipynb">Olympic History & Country Information</a>
+3. **Table 3:** Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
+<br><a href="Data/medals.ipynb">Cleaned Olympic History & Country Information</a>
 <br><a href="Data/medals.csv">Olympic History & Country Information CSV File</a>
 
 
