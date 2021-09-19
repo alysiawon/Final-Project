@@ -16,7 +16,7 @@
 
 **Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
 
-**Individual Branches**
+### Individual Branches
 - Alysia Won's Branch Name: alysia-won
 - Bala Banda's Branch Name: BalaBanda
 - Frank Sun's Branch Name: frank-sun
@@ -44,16 +44,24 @@ This will be completed by utilizing <a href="Resources">datasets located in the 
 - <a href="Resources/World GDP">World GDP</a>
 - <a href="Resources/World Coordinates">World Coordinates</a>
 
-**Data Exploration:** Data cleaning and wrangling.
-
 ### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
 ### Cleaned Data Source
 Our team cleaned and merged the data to produce a new dataset:
 1. Olympic History Data showcasing country name, country code, GDP, population and gold medals won
+<a href="Data/country.ipynb">Country Information</a>
+<a href="Data/country.csv">Country Information CSV File</a>
+
 2. 2020 Olympic Data showcasing only 2020 Olympic Data
+<a href="Data/cleaned_data.ipynb">2020 Olympic Information</a>
+<a href="Data/Athlete+GDP&Population.csv">2020 Olympic Information CSV File</a>
+
+
 3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
+<a href="Data/medals.ipynb">Olympic History & Country Information</a>
+<a href="Data/medals.csv">Olympic History & Country Information CSV File</a>
+
 
 ## Dashboard
 
