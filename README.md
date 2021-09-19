@@ -6,6 +6,7 @@
 
 **Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the draft of our final presentation.</a>
 
+**Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/index.html">Here is the draft of our dashboard.</a>
 
 ## 1. Overview of Project 
 
