@@ -89,81 +89,87 @@ function filterChart(filteredData){
 }  
 
 // ---------- Map ----------//
-
 function buildMap(data){
-  var coordinates = data.map(d => [d.latitude, d.longitude])
+  // --- Map Set Up --- //
 
-  let mapboxLink = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}";
+  // Street Layer
+  let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    accessToken: API_KEY
+  });
 
   // Satellite Layer
-  let satellite = L.tileLayer(mapboxLink, {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-    tileSize: 512,
+  let satelliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    zoomOffset: -1,
-    id: "mapbox/satellite-streets-v11",
     accessToken: API_KEY
-  })
-
-  // Light Layer
-  let light = L.tileLayer(mapboxLink, {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-    tileSize: 512,
-    maxZoom: 18,
-    zoomOffset: -1,
-    id: "mapbox/light-v10",
-    accessToken: API_KEY
-  })
+  });
 
   // Dark Layer
-  let dark = L.tileLayer(mapboxLink, {
-    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-    tileSize: 512,
-    maxZoom: 18,
-    zoomOffset: -1,
-    id: "mapbox/dark-v10",
-    accessToken: API_KEY
-  })
+  let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      accessToken: API_KEY
+  });
 
-  // Initiatlize Map
-  let map = L.map("mapid", {
-    center: [25,5],
-    zoom:2,
-    layer: [satellite],
-  })
+  // Initalize Map
+  let map = L.map('mapid', {
+    center: [0, 0],
+    zoom: 2,
+    layers: [streets]
+  });
 
-  // Layers
+  // Base Map
   let baseMaps = {
-    "Satellite": satellite,
-    "Light": light,
+    "Streets": streets,
+    "Satellite": satelliteStreets,
     "Dark": dark
-    };
-
-  // Add Second Layer
-  let medalsData = new L.LayerGroup();
-  // let gdpData = new L.LayerGroup();
-  // let populationData = new L.LayerGroup();
-
-  let overlays = {
-    "Medals": medalsData,
-    // "GDP": gdpData,
-    // "Population": populationData
   };
 
+  // Layer
+  let mapMedals = new L.LayerGroup();
+  let overlays = {
+    "Medals": mapMedals
+  };
+
+  // Show Map
   L.control.layers(baseMaps, overlays).addTo(map);
 
-  // Drop Points
+  // Legend
 
-  // Create Pop Up
-  // L.control.layers() {
-  // pointToLayer: function(feature, latlng) {
-  //   console.log(data);
-  //   return L.circleMarker(latlng);
-  // },
 
-  // onEachFeature: function(feature, layer) {
-  //   layer.bindPopup("Country Name: " + feature.properties.country_name + "<br>Number of Medals: " + feature.properties.gold_medals);
-  // }
+  // --- Map Set Up --- //
+
+  // Plot Coordinates
+  for (var i=0; i<data.length;i++){
+
+    var countryName = data.map(d => d.country_name);
+    var goldMedal = data.map(d => d.gold_medals);
+    var gdp = data.map(d => d.gdp);
+    var population = data.map(d => d.population);
+    var latlng = data.map(d => [d.latitude, d.longitude]);
+    
+    var marker = L.marker(latlng[i]).addTo(mapMedals)
+    marker.bindPopup(
+      "<b>Country Name: </b>" + countryName[i]+
+      "<br><b>Number of Gold Medals: </b>" + goldMedal[i] + 
+      "<br><b>Population: </b>" + population[i] +
+      "<br><b>GDP: </b>" + gdp[i]).openPopup();
+
+    // var circle = L.circle(latlng[i], {
+    //   color: "red",
+    //   fillColor: "#f03",
+    //   fillOpacity: 0.5,
+    //   radius: 1600,
+    // }).addTo(mapMedals);
+  }
+
+
+
+
+
+  
 }
 
-// buildMap(countryData);
+
