@@ -44,38 +44,21 @@ The data that has been created is:
 2. 2020 Olympic Data showcasing only 2020 Olympic Data
 3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
 
-
 ## Dashboard
+<img align="right" src="Analysis/dashboard.png" width="250">
 
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
-
-### Olympic Gold Medal Predictor
-
-The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
-- How many medals will you win?
-- What would your rank be based on the 2020 Olympics?
-- A table to show where you would be ranked
-
-### Olympic History
-
-
-
-## Dashboard
-
-In our dashboard, we will be highlighting two key items:
-1. Olympic Gold Medal Predictor
-2. Olympic History
-
-### Olympic Gold Medal Predictor
-
-The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
-- How many medals will you win?
-- What would your rank be based on the 2020 Olympics?
-- A table to show where you would be ranked
 
 Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a>.
+
+### Olympic Gold Medal Predictor
+
+The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
+- How many medals will you win?
+- What would your rank be based on the 2020 Olympics?
+- A table to show where you would be ranked
 
 ### Olympic History
 
