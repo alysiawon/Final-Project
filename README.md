@@ -23,6 +23,8 @@ This will be completed by utiliizing the following datasets:
 
 **Data Exploration:** Data cleaning and wrangling.
 
+**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the link.</a>.
+
 ## Github
 
 **Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
@@ -55,6 +57,25 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 - How many medals will you win?
 - What would your rank be based on the 2020 Olympics?
 - A table to show where you would be ranked
+
+### Olympic History
+
+
+
+## Dashboard
+
+In our dashboard, we will be highlighting two key items:
+1. Olympic Gold Medal Predictor
+2. Olympic History
+
+### Olympic Gold Medal Predictor
+
+The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
+- How many medals will you win?
+- What would your rank be based on the 2020 Olympics?
+- A table to show where you would be ranked
+
+Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a>.
 
 ### Olympic History
 
