@@ -21,16 +21,12 @@ The two outputs we would like to have is:
 1. Gold Medalist Data with Country Data 
 2. 2020 Olympic Data
 
-This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>. The links below will showcase where we received our data:
-
-- <a href="https://www.kaggle.com/mysarahmadbhat/120-years-of-olympic-history">1896 to 2016 Olympic Data</a>
-- <a href="https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo">2020 Olympic Data</a>
-- <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD">World GDP</a>
-- <a href="https://www.kaggle.com/themlphdstudent/countries-population-from-1955-to-2020">World Population</a>
-- <a href="https://gist.github.com/radcliff/f09c0f88344a7fcef373">Country Code</a>
-- <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
-
-
+This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>:
+- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
+- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
+- <a href="Resources/World Population">World Population</a>
+- <a href="Resources/World GDP">World GDP</a>
+- <a href="Resources/World Coordinates">World Coordinates</a>
 
 ## 3. Data Cleaning
 
@@ -72,16 +68,12 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 - What would your rank be based on the 2020 Olympics?
 - A table to show where you would be ranked
 
-The predictor utilizes the data from Table 1 and 2 to complete this section. 
-
 ### Olympic History
 
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
 - A table to show where you would be ranked
 - A bar graph to visualize the table
 - A map to showcase the country with the most medals
-
-The predictor utilizes the data from Table 3 to complete this section. 
 
 ### Process of Creating The Dashboard
 
@@ -99,12 +91,12 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 
 ## 6. Machine Learning 
 
-Forecasting the number of olympic medals for each country  is important to different stakeholders. Using the data sources listed above we aim to find out if  factors like GDP and Population impact the likelihood of a country winning more olympic medals.
+Forecasting the number of Olympic medals for each country is important to different stakeholders. Using the data sources listed above we aim to find out if factors like GDP and population impact the likelihood of a country winning more gold medals in Olympic games.
 
 ### Problem Analysis
-We will be using supervised machine learning, more specifically a random forest algorithm which takes into account more complex non-linear interactions. Our Dependent variable will be the number of medals and the key independent variables will be GDP and population.
+Our team used supervised machine learning, more specifically a random forest algorithm which takes into account more complex non-linear interactions. Our dependent variable is the number of gold medals and the key independent variables are GDP and population.
 
-Using the following data sets 120 years of olympics, worldwide GDP History and Population total for each country we will build a classifier that will help olympic stakeholders  classify whether a country will win more olympic medals compared to the past years given the population size and GDP of a country.
+Using the following data sets 120 years of Olympics, worldwide GDP history and population total for each country we will build a classifier that will help Olympic stakeholders  classify whether a country will win more Olympic medals compared to the past years given the population size and GDP of a country.
 
 ### Forecasting Process
 1. We will import pandas, Numpy and Matplotlib
@@ -118,6 +110,7 @@ Using the following data sets 120 years of olympics, worldwide GDP History and P
 
 In our conclusion we aim to determine if our predictive model is accurate by comparing the results to the 2021 Tokyo olympic dataset to determine the accuracy of our model in the hopes that the stakeholders will be able to make more informed decisions to increase the likelihood of their country winning more medals.
 
+### Results
 
 ## 7. Github
 
