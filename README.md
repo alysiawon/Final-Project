@@ -8,12 +8,9 @@
 
 **Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals. 
 
-
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
-**Data Exploration:** Data cleaning and wrangling.
-
-**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the link.</a>.
+**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the draft of our final presentation.</a>
 
 ## Github
 
@@ -25,19 +22,29 @@
 - Frank Sun's Branch Name: frank-sun
 - Steve Macpherson's Branch Name: smacpherson
 
-## Database
+### Github Layout
+In our Github repository, we have created the following folders:
+- <a href="Analysis">Analysis</a>: This consists of images and documnetation of our process. 
+- <a href="Dashboard">Dashboard</a>: This folder is used to create the dashboard utilizing techniques such as Javascript, CSS, and HTML.
+- <a href="Data">Data</a>: This folder consists of our cleaned data that was completed using Pandas and SQL, as well as our ERD diagram.
+- <a href="Resources">Resources</a>: This folder consists of the original datasets.
+- <a href="Machine Learning">Machine Learning</a>: This folder consists of our Machine Learning diagram and framework.
+
+## Data Source
 
 ### Description of Data Source
-By utilizing various <a href="Resources">datasets located in the Resources folder</a>, the two outputs we would like to have is:
+The two outputs we would like to have is:
 1. Gold Medalist Data with Country Data 
 2. 2020 Olympic Data
 
-This will be completed by utiliizing the following datasets:
+This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>:
 - <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
 - <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
 - <a href="Resources/World Population">World Population</a>
 - <a href="Resources/World GDP">World GDP</a>
 - <a href="Resources/World Coordinates">World Coordinates</a>
+
+**Data Exploration:** Data cleaning and wrangling.
 
 ### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
@@ -48,15 +55,13 @@ Our team cleaned and merged the data to produce a new dataset:
 2. 2020 Olympic Data showcasing only 2020 Olympic Data
 3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
 
-### Process
-
 ## Dashboard
 
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
 
-Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a> and a sample image on the right.
+Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Storyboard</a> and a sample image on the right.
 
 <img align="right" src="Analysis/dashboard.png" width="250">
 
@@ -74,9 +79,20 @@ The purpose of this section is to let the user select a previous Olympic year an
 - A bar graph to visualize the table
 - A map to showcase the country with the most medals
 
-### Progress
+### Process of Creating The Dashboard
 
-Since the project start date, our team has been able to clean up 
+The dashboard will include utilizing Javascript, HTML, CSS, Leaflet and Plotly. 
+
+**1. Scrape the Data**
+
+
+**2. Creating Database**
+
+Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Logic Javascript File</a> and modify the <a href="Dashboard/index.html">HTML Index File</a>. 
+
+**3. Web Application**
+
+<a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
 ## Machine Learning 
 
