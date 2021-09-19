@@ -1,36 +1,19 @@
 # Final-Project
 
-## Presentation
-
 **Group Name:** Olympiads
 
 **Topic:** Olympic Medal Predictor 
+
+**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the draft of our final presentation.</a>
+
+
+## 1. Overview of Project 
 
 **Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals. 
 
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
-**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the draft of our final presentation.</a>
-
-## Github
-
-**Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
-
-### Individual Branches
-- Alysia Won's Branch Name: alysia-won
-- Bala Banda's Branch Name: BalaBanda
-- Frank Sun's Branch Name: frank-sun
-- Steve Macpherson's Branch Name: smacpherson
-
-### Github Layout
-In our Github repository, we have created the following folders:
-- <a href="Analysis">Analysis</a>: This consists of images and documnetation of our process. 
-- <a href="Dashboard">Dashboard</a>: This folder is used to create the dashboard utilizing techniques such as Javascript, CSS, and HTML.
-- <a href="Data">Data</a>: This folder consists of our cleaned data that was completed using Pandas and SQL, as well as our ERD diagram.
-- <a href="Resources">Resources</a>: This folder consists of the original datasets.
-- <a href="Machine Learning">Machine Learning</a>: This folder consists of our Machine Learning diagram and framework.
-
-## Data Source
+## 2. Overview of Data
 
 ### Description of Data Source
 The two outputs we would like to have is:
@@ -43,6 +26,8 @@ This will be completed by utilizing <a href="Resources">datasets located in the 
 - <a href="Resources/World Population">World Population</a>
 - <a href="Resources/World GDP">World GDP</a>
 - <a href="Resources/World Coordinates">World Coordinates</a>
+
+## 3. Data Cleaning
 
 ### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
@@ -63,8 +48,9 @@ Our team cleaned and merged the data utilizing Pandas and SQL to produce <a href
 <br><a href="Data/medals.ipynb">Cleaned Olympic History & Country Information</a>
 <br><a href="Data/medals.csv">Olympic History & Country Information CSV File</a>
 
+## 4. Database
 
-## Dashboard
+## 5. Dashboard
 
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
@@ -94,7 +80,6 @@ The dashboard will include utilizing Javascript, HTML, CSS, Leaflet and Plotly.
 
 **1. Scrape the Data**
 
-
 **2. Creating Database**
 
 Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Logic Javascript File</a> and modify the <a href="Dashboard/index.html">HTML Index File</a>. 
@@ -103,7 +88,7 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 
 <a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
-## Machine Learning 
+## 6. Machine Learning 
 
 Forecasting the number of olympic medals for each country  is important to different stakeholders. Using the data sources listed above we aim to find out if  factors like GDP and Population impact the likelihood of a country winning more olympic medals.
 
@@ -123,3 +108,22 @@ Using the following data sets 120 years of olympics, worldwide GDP History and P
 8. In the last step we visualize the results of the Random Classification model on a graph.
 
 In our conclusion we aim to determine if our predictive model is accurate by comparing the results to the 2021 Tokyo olympic dataset to determine the accuracy of our model in the hopes that the stakeholders will be able to make more informed decisions to increase the likelihood of their country winning more medals.
+
+
+## 7. Github
+
+**Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
+
+### Individual Branches
+- Alysia Won's Branch Name: alysia-won
+- Bala Banda's Branch Name: BalaBanda
+- Frank Sun's Branch Name: frank-sun
+- Steve Macpherson's Branch Name: smacpherson
+
+### Github Layout
+In our Github repository, we have created the following folders:
+- <a href="Analysis">Analysis</a>: This consists of images and documnetation of our process. 
+- <a href="Dashboard">Dashboard</a>: This folder is used to create the dashboard utilizing techniques such as Javascript, CSS, and HTML.
+- <a href="Data">Data</a>: This folder consists of our cleaned data that was completed using Pandas and SQL, as well as our ERD diagram.
+- <a href="Resources">Resources</a>: This folder consists of the original datasets.
+- <a href="Machine Learning">Machine Learning</a>: This folder consists of our Machine Learning diagram and framework.
