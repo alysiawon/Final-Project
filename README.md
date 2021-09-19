@@ -8,16 +8,6 @@
 
 **Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals. 
 
-**Description of Data Source:** By utilizing various dataset, the three outputs we would like to have is:
-1. Gold Medalist Data from 1896 to 2020, such as name, country, height, weight, age, and year competed in the Olympic. This will be completed by merging the 1896 to 2016 Olympic data with the more recent 2020 Olympic.
-2. Country Data, such as population and GDP.
-
-This will be completed by utiliizing the following datasets:
-- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
-- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
-- <a href="Resources/World Population">World Population</a>
-- <a href="Resources/World GDP">World GDP</a>
-- <a href="Resources/World Coordinates">World Coordinates</a>
 
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
@@ -37,12 +27,28 @@ This will be completed by utiliizing the following datasets:
 
 ## Database
 
+### Description of Data Source
+By utilizing various <a href="Resources">datasets located in the Resources folder</a>, the two outputs we would like to have is:
+1. Gold Medalist Data with Country Data 
+2. 2020 Olympic Data
+
+This will be completed by utiliizing the following datasets:
+- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
+- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
+- <a href="Resources/World Population">World Population</a>
+- <a href="Resources/World GDP">World GDP</a>
+- <a href="Resources/World Coordinates">World Coordinates</a>
+
+### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
-The data that has been created is:
+### Cleaned Data Source
+Our team cleaned and merged the data to produce a new dataset:
 1. Olympic History Data showcasing country name, country code, GDP, population and gold medals won
 2. 2020 Olympic Data showcasing only 2020 Olympic Data
 3. Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
+
+### Process
 
 ## Dashboard
 
@@ -50,7 +56,7 @@ In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
 
-Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a>.
+Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Draft</a> and a sample image on the right.
 
 <img align="right" src="Analysis/dashboard.png" width="250">
 
@@ -67,6 +73,10 @@ The purpose of this section is to let the user select a previous Olympic year an
 - A table to show where you would be ranked
 - A bar graph to visualize the table
 - A map to showcase the country with the most medals
+
+### Progress
+
+Since the project start date, our team has been able to clean up 
 
 ## Machine Learning 
 
