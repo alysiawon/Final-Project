@@ -47,7 +47,7 @@ This will be completed by utilizing <a href="Resources">datasets located in the 
 ### Entity Relationship Diagram (ERD)
 After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
 
-<img align="right" src="Database/ERD.png" width="250">
+<img src="Database/ERD.png" width="450">
 
 ### Cleaned Data Source
 Our team cleaned and merged the data utilizing Pandas and SQL to produce <a href="Data">new datasets located in the Data folder</a>:
