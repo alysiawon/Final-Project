@@ -108,6 +108,7 @@ Using the following data sets 120 years of Olympics, worldwide GDP history and p
 - Then we used the fit() and predict() functions to run the regression and predict the values. 
 
 - The next step was visualizing the relationship between dependent variable and independent variables in the regression. 
+
 ![Regression 1](https://user-images.githubusercontent.com/82552516/133954601-2bb36cc6-03d5-4835-aa4f-8e82aa19380f.png)
 ![Regression 2](https://user-images.githubusercontent.com/82552516/133954604-91f3ced3-657a-4418-b541-36dcdcb62177.png)
 
