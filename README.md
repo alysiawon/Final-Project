@@ -112,7 +112,7 @@ Using the following data sets 120 years of Olympics, worldwide GDP history and p
 ![Regression 2](https://user-images.githubusercontent.com/82552516/133954604-91f3ced3-657a-4418-b541-36dcdcb62177.png)
 
 
-### Results
+### Result of the machine learning analysis
 - The linear relationship was found after running the regression model. Both coefficients and intercept were discovered by analyzing the historical data, and accuracy rate was calculated by spliting data into training and testing set. The model achieved 68.34% accuracy. 
 
 ![Accuracy Rate](https://user-images.githubusercontent.com/82552516/133954746-3b2d6324-1b4c-4cb4-bf26-992baa3aaf42.png)
