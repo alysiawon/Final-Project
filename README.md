@@ -10,7 +10,7 @@
 
 ## 1. Overview of Project 
 
-**Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more medals. 
+**Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more gold medals. 
 
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
@@ -94,23 +94,29 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 Forecasting the number of Olympic medals for each country is important to different stakeholders. Using the data sources listed above we aim to find out if factors like GDP and population impact the likelihood of a country winning more gold medals in Olympic games.
 
 ### Problem Analysis
+The purpose of this study is to discover the best machine learning model to predict the number of gold medals a country will win based on their GDP and population information.
+
 Our team used supervised machine learning, more specifically a random forest algorithm which takes into account more complex non-linear interactions. Our dependent variable is the number of gold medals and the key independent variables are GDP and population.
 
 Using the following data sets 120 years of Olympics, worldwide GDP history and population total for each country we will build a classifier that will help Olympic stakeholders  classify whether a country will win more Olympic medals compared to the past years given the population size and GDP of a country.
 
 ### Forecasting Process
-1. We will import pandas, Numpy and Matplotlib
-2. We will import our datasets and assign our X and Y variables and examine the dataset to ensure that they have been imported correctly
-3. We will spit the dataset into a training and testing test. Where 80% of the data will represent the training set and 20 % will represent the test set.
-4. We will then scale the data to increase the speed of the program by scaling down bitht the X_train and X_test data.
-5. Once the training test is ready we can import the random forest classifier class and for the training set to our model
-6. Then we can use the classifier.predict() function to predict the values for the test set and the values can be stored in a variable. 
-7. The next step would be to determine the accuracy of the trained model by plotting a confusion matrix. The confusion matrix shows the number of correct and incorrect predictions on a classification problem when the real values of the test are known.
-8. In the last step we visualize the results of the Random Classification model on a graph.
+- Sklearn, pandas and matplotlib libraries were used for model constructing. GDP and population were assigned as independent variables and the number of gold medals was assigned as dependent variable of the model. 
 
-In our conclusion we aim to determine if our predictive model is accurate by comparing the results to the 2021 Tokyo olympic dataset to determine the accuracy of our model in the hopes that the stakeholders will be able to make more informed decisions to increase the likelihood of their country winning more medals.
+- Data was scaled to increase the speed of the program by scaling down both the X_train and X_test data.
+
+- Then we used the fit() and predict() functions to run the regression and predict the values. 
+
+- The next step was visualizing the relationship between dependent variable and independent variables in the regression. 
+![Regression 1](https://user-images.githubusercontent.com/82552516/133954601-2bb36cc6-03d5-4835-aa4f-8e82aa19380f.png)
+![Regression 2](https://user-images.githubusercontent.com/82552516/133954604-91f3ced3-657a-4418-b541-36dcdcb62177.png)
+
 
 ### Results
+- The linear relationship was found after running the regression model. Both coefficients and intercept were discovered by analyzing the historical data, and accuracy rate was calculated by spliting data into training and testing set. The model achieved 68.34% accuracy. 
+
+![Accuracy Rate](https://user-images.githubusercontent.com/82552516/133954746-3b2d6324-1b4c-4cb4-bf26-992baa3aaf42.png)
+
 
 ## 7. Github
 
