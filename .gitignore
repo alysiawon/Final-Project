@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 config.js
+=======
+config.py
+config.js
+
+>>>>>>> Stashed changes
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
