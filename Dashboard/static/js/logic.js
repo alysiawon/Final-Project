@@ -6,8 +6,6 @@
 //   console.log(data)
 // });
 
-d3.json("http://127.0.0.1:5000/api/v1.0/tokyo")
-
 // ---------- Table For History ----------//
 
 // Build Table References 
@@ -66,13 +64,11 @@ function updateFilters() {
   buildTable(filteredData);
   filterChart(filteredData);
   buildMap(filteredData);
+
 }
 
 // Attach Event To Listen To Data
 d3.selectAll("input").on("change", updateFilters)
-
-// Build New Table
-// buildTable(countryData);
 
 // ---------- Bar Graph ----------//
 
