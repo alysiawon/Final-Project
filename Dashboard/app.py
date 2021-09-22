@@ -7,20 +7,17 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
+from flask_cors import CORS
 from config import password
 
 # Set Up Database
 host = "olympic-databases.cqg15afinz5u.us-east-2.rds.amazonaws.com"
 engine = create_engine(f"postgresql://postgres:{password}@{host}:5432/olympic-databases")
-# Base = automap_base()
-# Base.prepare(engine, reflect=True)
-# Tokyo = Base.classes.tokyo
-# Medals = Base.classes.medals
-# session = Session(engine)
 connection = engine.connect()
 
 # Set Up Flask
 app = Flask(__name__)
+CORS(app)
 
 # Create Flask Routes
 @app.route("/api/v1.0/medals")

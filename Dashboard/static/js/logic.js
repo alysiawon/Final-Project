@@ -1,12 +1,12 @@
 // // The Data From medals.js
 // let countryData = countryTest;
 
-// let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/tokyo")
-//   .then(function(data){
-//   console.log(data)
-// });
 
-// ---------- Table For History ----------//
+let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals")
+// let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((data) => {console.log(data)})
+// let tokyoData = d3.json("http://127.0.0.1:5000/api/v1.0/tokyo").then((data) => {console.log(data)})
+
+// // // ---------- Table For History ----------//
 
 // Build Table References 
 var tbody = d3.select("tbody");
@@ -70,7 +70,7 @@ function updateFilters() {
 // Attach Event To Listen To Data
 d3.selectAll("input").on("change", updateFilters)
 
-// ---------- Bar Graph ----------//
+// // ---------- Bar Graph ----------//
 
 // Build Bar Graph with Filtered Data
 function filterChart(filteredData) {
@@ -164,12 +164,6 @@ function buildMap(data) {
       "<br><b>GDP: </b>" + gdp[i]).openPopup();
 
   }
-
-
-
-
-
-
 }
 
 
