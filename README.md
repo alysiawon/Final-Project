@@ -22,9 +22,11 @@ The Gold Medal Predicator will predict the exact number of medals you will win d
 
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
-## 2. Overview of Data
+## 2. Overview of Data & Database
 
 In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
+
+<img align="right" src="Database/2. ERD/erd-process.png" width="450">
 
 ### Description of Datasets
 
@@ -38,36 +40,68 @@ By utilizing Kaggle, World Bank and Google, we were able to find our datasets. T
 ### Entity Relationship Diagram (ERD)
 After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases our final datasets we will use to build our model and the right showcases the original datasets and how it links together. 
 
-<img src="Database/2. ERD/erd-process.png" width="450">
-
 As a result, the two outputs that are created are:
-1. Medals Data: A list of gold medalist countries and their country data (GDP, population, coordinates)
-2. Tokyo Data: A list of 2020 gold medalist countries
+**1. Medals Data:** A list of gold medalist countries and their country data (GDP, population, coordinates)
+**2. Tokyo Data:** A list of 2020 gold medalist countries
 
 <img src="Database/2. ERD/erd-final.png" width="450">
 
 ### Cleaned Data Source
 
-After planning how our data will link, our team worked on cleaning our datasets to create the final data needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
+After planning how our data will link, our team worked on cleaning our datasets to create the final dataframe needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
 
-Our team utilized both Pandas and SQL to clean the data, merge dataframes, reformat columns and data. 
+Our team utilized <a href="Database/3. Data Cleaning/medals.iypnb">Pandas</a> to clean the data, merge dataframes, reformat columns and data. 
 
-Our team cleaned and merged the data utilizing Pandas and SQL to produce <a href="Data">new datasets located in the Data folder</a>:
-- **Table 1:** Olympic History Data showcasing country name, country code, GDP, population and gold medals won
-<br><a href="Data/country.ipynb">Cleaned Country Information</a>
-<br><a href="Data/country.csv">Country Information CSV File</a>
+<img src="Database/3. Data Cleaning/data-cleaning.png" width="450">
 
-- **Table 2:** 2020 Olympic Data showcasing only 2020 Olympic Data
-<br><a href="Data/cleaned_data.ipynb">Cleaned 2020 Olympic Information</a>
-<br><a href="Data/Athlete+GDP&Population.csv">2020 Olympic Information CSV File</a>
+The final CSV files are:
+1. <a href="Database/3. Data Cleaning/medals.csv">Table 1: Medals Dataframe</a>
+2. <a href="Database/3. Data Cleaning/tokyo.csv">Table 2: Tokyo Dataframe</a>
 
-- **Table 3:** Olympic History and Mapping information showcasing country name, country code, GDP, population, latitude, longitude and gold medals won
-<br><a href="Data/medals.ipynb">Cleaned Olympic History & Country Information</a>
-<br><a href="Data/medals.csv">Olympic History & Country Information CSV File</a>
+### Database
 
-## 4. Database
-*** TBA ***
-## 5. Dashboard
+Our team created a local database application to store our data utilizing AWS, pgAdmin, SQL and Python. 
+
+The process we used to create a local database included:
+
+1. Creating an AWS RDS database and linked it to pgAdmin. 
+
+2. After linking it to pgAdmin, we were able to use SQL to link our clean data onto our local database.
+
+<img src="Database/4. SQL/pgadmin.png" width="450">
+
+3. Once pgAdmin was set up, we create an <a href="Dashbord/app.py">application</a> utilizing Flask which we later linked it to our dashboard. 
+
+## 3. Machine Learning 
+
+Forecasting the number of Olympic medals for each country is important to different stakeholders. Using the data sources listed above we aim to find out if factors like GDP and population impact the likelihood of a country winning more gold medals in Olympic games.
+
+### Problem Analysis
+The purpose of this study is to discover the best machine learning model to predict the number of gold medals a country will win based on their GDP and population information.
+
+Our team used supervised machine learning, more specifically a random forest algorithm which takes into account more complex non-linear interactions. Our dependent variable is the number of gold medals and the key independent variables are GDP and population.
+
+Using the following data sets 120 years of Olympics, worldwide GDP history and population total for each country we will build a classifier that will help Olympic stakeholders  classify whether a country will win more Olympic medals compared to the past years given the population size and GDP of a country.
+
+### Forecasting Process
+- Sklearn, pandas and matplotlib libraries were used for model constructing. GDP and population were assigned as independent variables and the number of gold medals was assigned as dependent variable of the model. 
+
+- Data was scaled to increase the speed of the program by scaling down both the X_train and X_test data.
+
+- Then we used the fit() and predict() functions to run the regression and predict the values. 
+
+- The next step was visualizing the relationship between dependent variable and independent variables in the regression. 
+
+![Regression 1](https://user-images.githubusercontent.com/82552516/133954601-2bb36cc6-03d5-4835-aa4f-8e82aa19380f.png)
+![Regression 2](https://user-images.githubusercontent.com/82552516/133954604-91f3ced3-657a-4418-b541-36dcdcb62177.png)
+
+
+### Result of the machine learning analysis
+- The linear relationship was found after running the regression model. Both coefficients and intercept were discovered by analyzing the historical data, and accuracy rate was calculated by spliting data into training and testing set. The model achieved 68.34% accuracy. 
+
+![Accuracy Rate](https://user-images.githubusercontent.com/82552516/133954746-3b2d6324-1b4c-4cb4-bf26-992baa3aaf42.png)
+
+## 4. Dashboard
 
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
@@ -105,37 +139,7 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 
 <a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
-## 6. Machine Learning 
-
-Forecasting the number of Olympic medals for each country is important to different stakeholders. Using the data sources listed above we aim to find out if factors like GDP and population impact the likelihood of a country winning more gold medals in Olympic games.
-
-### Problem Analysis
-The purpose of this study is to discover the best machine learning model to predict the number of gold medals a country will win based on their GDP and population information.
-
-Our team used supervised machine learning, more specifically a random forest algorithm which takes into account more complex non-linear interactions. Our dependent variable is the number of gold medals and the key independent variables are GDP and population.
-
-Using the following data sets 120 years of Olympics, worldwide GDP history and population total for each country we will build a classifier that will help Olympic stakeholders  classify whether a country will win more Olympic medals compared to the past years given the population size and GDP of a country.
-
-### Forecasting Process
-- Sklearn, pandas and matplotlib libraries were used for model constructing. GDP and population were assigned as independent variables and the number of gold medals was assigned as dependent variable of the model. 
-
-- Data was scaled to increase the speed of the program by scaling down both the X_train and X_test data.
-
-- Then we used the fit() and predict() functions to run the regression and predict the values. 
-
-- The next step was visualizing the relationship between dependent variable and independent variables in the regression. 
-
-![Regression 1](https://user-images.githubusercontent.com/82552516/133954601-2bb36cc6-03d5-4835-aa4f-8e82aa19380f.png)
-![Regression 2](https://user-images.githubusercontent.com/82552516/133954604-91f3ced3-657a-4418-b541-36dcdcb62177.png)
-
-
-### Result of the machine learning analysis
-- The linear relationship was found after running the regression model. Both coefficients and intercept were discovered by analyzing the historical data, and accuracy rate was calculated by spliting data into training and testing set. The model achieved 68.34% accuracy. 
-
-![Accuracy Rate](https://user-images.githubusercontent.com/82552516/133954746-3b2d6324-1b4c-4cb4-bf26-992baa3aaf42.png)
-
-
-## 7. Github
+## 5. Github
 
 **Communication Protocols:** Our team's main form of communication will be through Slack, as well as our weekly classes.
 
