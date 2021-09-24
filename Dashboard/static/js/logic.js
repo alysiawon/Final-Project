@@ -2,7 +2,7 @@
 // let countryData = countryTest;
 
 
-let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals")
+// let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals")
 // let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((data) => {console.log(data)})
 // let tokyoData = d3.json("http://127.0.0.1:5000/api/v1.0/tokyo").then((data) => {console.log(data)})
 
@@ -52,9 +52,10 @@ function updateFilters() {
     delete filters[elementid]
   }
 
-  var filteredData = countryData;
-
-  Object.entries(filters)
+  // var filteredData = countryData;
+  
+  d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((filteredData) => {
+    Object.entries(filters)
     .forEach(([key, value]) => {
       filteredData = filteredData.filter(row => row[key] === value)
         .filter(medals => medals.gold_medals >= 1)
@@ -64,6 +65,7 @@ function updateFilters() {
   buildTable(filteredData);
   filterChart(filteredData);
   buildMap(filteredData);
+  })
 
 }
 

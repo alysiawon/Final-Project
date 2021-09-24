@@ -4,13 +4,21 @@
 
 **Topic:** Olympic Medal Predictor 
 
-**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is the draft of our final presentation.</a>
+**Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is our final presentation.</a>
 
 **Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/index.html">Here is the draft of our dashboard.</a>
 
 ## 1. Overview of Project 
 
-**Purpose Of The Project:** The purpose of this project is to comparing country statistics such as population and GDP to see if this can impact the likelihood that a country will win more gold medals. 
+**Purpose Of The Project:** The purpose of this project is to create an overview of the Olympic history and use that data to predict the number of gold medals a country could win. The project will consist of two elements:
+
+1. Olympic History Dashboard
+
+The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
+
+2. Gold Medal Predictor
+
+The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
 
 **Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
