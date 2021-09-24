@@ -50,13 +50,13 @@ As a result, the two outputs that are created are:
 
 After planning how our data will link, our team worked on cleaning our datasets to create the final dataframe needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
 
-Our team utilized <a href="Database/3. Data Cleaning/medals.iypnb">Pandas</a> to clean the data, merge dataframes, reformat columns and data. 
+Our team utilized <a href="Database/3. Cleaned Data/medals.iypnb">Pandas</a> to clean the data, merge dataframes, reformat columns and data. 
 
-<img src="Database/3. Data Cleaning/data-cleaning.png" width="450">
+<img src="Database/3. Cleaned Data/Analysis/data-cleaning.png" width="450">
 
 The final CSV files are:
-1. <a href="Database/3. Data Cleaning/medals.csv">Table 1: Medals Dataframe</a>
-2. <a href="Database/3. Data Cleaning/tokyo.csv">Table 2: Tokyo Dataframe</a>
+1. <a href="Database/3. Cleaned Data/medals.csv">Table 1: Medals Dataframe</a>
+2. <a href="Database/3. Cleaned Data/tokyo.csv">Table 2: Tokyo Dataframe</a>
 
 ### Database
 
