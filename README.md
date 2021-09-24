@@ -24,26 +24,34 @@ The Gold Medal Predicator will predict the exact number of medals you will win d
 
 ## 2. Overview of Data
 
-### Description of Data Source
-The two outputs we would like to have is:
-1. Gold Medalist Data with Country Data 
-2. 2020 Olympic Data
+In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
 
-This will be completed by utilizing <a href="Resources">datasets located in the Resources folder</a>:
-- <a href="Resources/120 Years Of Olympic Data">1896 to 2016 Olympic Data</a>
-- <a href="Resources/2021 Olympics">2020 Olympic Data</a>.
-- <a href="Resources/World Population">World Population</a>
-- <a href="Resources/World GDP">World GDP</a>
-- <a href="Resources/World Coordinates">World Coordinates</a>
+### Description of Datasets
 
-## 3. Data Cleaning
+By utilizing Kaggle, World Bank and Google, we were able to find our datasets. The downloaded datasets are located in the <a href="Database/1. Datasets">Data folder</a>. Listed below is the links to the original datasets:
+- <a href="https://www.kaggle.com/mysarahmadbhat/120-years-of-olympic-history">1896 to 2016 Olympic Data</a>
+- <a href="https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo">2020 Olympic Data</a>.
+- <a href="https://www.kaggle.com/themlphdstudent/countries-population-from-1955-to-2020">World Population</a>
+- <a href="https://www.kaggle.com/jonscheaffer/worldwide-gdp-history-19602016">World GDP</a>
+- <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
 
 ### Entity Relationship Diagram (ERD)
-After analyzing our data, our team created an <a href="Database/ERD.png">ERD Database Draft</a>. In this draft, it will showcase how our current datasets link together.
+After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases our final datasets we will use to build our model and the right showcases the original datasets and how it links together. 
 
-<img src="Database/ERD.png" width="450">
+<img src="Database/2. ERD/erd-process.png" width="450">
+
+As a result, the two outputs that are created are:
+1. Medals Data: A list of gold medalist countries and their country data (GDP, population, coordinates)
+2. Tokyo Data: A list of 2020 gold medalist countries
+
+<img src="Database/2. ERD/erd-final.png" width="450">
 
 ### Cleaned Data Source
+
+After planning how our data will link, our team worked on cleaning our datasets to create the final data needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
+
+Our team utilized both Pandas and SQL to clean the data, merge dataframes, reformat columns and data. 
+
 Our team cleaned and merged the data utilizing Pandas and SQL to produce <a href="Data">new datasets located in the Data folder</a>:
 - **Table 1:** Olympic History Data showcasing country name, country code, GDP, population and gold medals won
 <br><a href="Data/country.ipynb">Cleaned Country Information</a>
