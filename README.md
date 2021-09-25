@@ -10,13 +10,15 @@
 
 ## 1. Overview of Project 
 
-**Purpose Of The Project:** The purpose of this project is to create an overview of the Olympic history and use that data to predict the number of gold medals a country could win. The project will consist of two elements:
+### Purpose Of The Project:
 
-1. Olympic History Dashboard
+The purpose of this project is to create an overview of the Olympic history and use that data to predict the number of gold medals a country could win. The project will consist of two elements:
+
+**Olympic History Dashboard**
 
 The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
 
-2. Gold Medal Predictor
+**Gold Medal Predictor**
 
 The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
 
