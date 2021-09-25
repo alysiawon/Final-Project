@@ -28,9 +28,6 @@ In this project, we focus on using historic Olympic data and country data such a
 
 <img align="right" src="Database/2. ERD/erd-process.png" width="300">
 
-<img align="right" src="Database/2. ERD/erd-final.png" width="300">
-
-
 ### Description of Datasets
 
 By utilizing datasets from Kaggle, World Bank and Google, we were able to find our data. The downloaded datasets are located in the <a href="Database/1. Datasets">Data folder</a>. Listed below is the links to the original datasets:
@@ -39,6 +36,8 @@ By utilizing datasets from Kaggle, World Bank and Google, we were able to find o
 - <a href="https://www.kaggle.com/themlphdstudent/countries-population-from-1955-to-2020">World Population</a>
 - <a href="https://www.kaggle.com/jonscheaffer/worldwide-gdp-history-19602016">World GDP</a>
 - <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
+
+<img align="right" src="Database/2. ERD/erd-final.png" width="300">
 
 ### Entity Relationship Diagram (ERD)
 After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases the original datasets and the left showcases our final datasets we will use to build our model and how it links together. 
