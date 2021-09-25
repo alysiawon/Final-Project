@@ -16,7 +16,7 @@ The purpose of this project is to create an overview of the Olympic history and 
 
 **1. Olympic History Dashboard:** The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
 
-**2.Gold Medal Predictor:**The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
+**2.Gold Medal Predictor:** The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
 
 ### Questions To Answer With The Data Source:
 
