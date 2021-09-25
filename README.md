@@ -16,9 +16,9 @@ The purpose of this project is to create an overview of the Olympic history and 
 
 **1. Olympic History Dashboard:** The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
 
-**2.Gold Medal Predictor:** The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
+**2. Gold Medal Predictor:** The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
 
-### Questions To Answer With The Data Source:
+### Questions To Answer
 
 Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
@@ -27,6 +27,9 @@ Based on the dataset, does population and GDP make a country more likely to win 
 In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
 
 <img align="right" src="Database/2. ERD/erd-process.png" width="300">
+
+<img align="right" src="Database/2. ERD/erd-final.png" width="300">
+
 
 ### Description of Datasets
 
@@ -45,8 +48,6 @@ As a result, the final two outputs that are created are:
 **1. Medals Data:** A list of gold medalist countries and their country data (GDP, population, coordinates)
 
 **2. Tokyo Data:** A list of the 2020 gold medalist countries
-
-<img align="right" src="Database/2. ERD/erd-final.png" width="450">
 
 ### Cleaned Data Source
 
