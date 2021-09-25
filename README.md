@@ -24,9 +24,9 @@ Based on the dataset, does population and GDP make a country more likely to win 
 
 ## 2. Overview of Data & Database
 
-In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
-
 <img align="right" src="Database/2. ERD/erd-process.png" width="300">
+
+In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
 
 ### Description of Datasets
 
@@ -38,9 +38,10 @@ By utilizing datasets from Kaggle, World Bank and Google, we were able to find o
 - <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
 
 ### Entity Relationship Diagram (ERD)
-After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases the original datasets and the left showcases our final datasets we will use to build our model and how it links together. 
 
 <img align="right" src="Database/2. ERD/erd-final.png" width="300">
+
+After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases the original datasets and the left showcases our final datasets we will use to build our model and how it links together. 
 
 As a result, the final two outputs that are created are:
 
