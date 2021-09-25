@@ -127,11 +127,11 @@ The purpose of this section is to let the user select a previous Olympic year an
 
 The dashboard will include utilizing Python, Javascript, HTML, CSS, Leaflet and Plotly. 
 
+<img align="left" src="Dashboard/Analysis/dashboard.png" width="200">
+
 **1. Create the Framework**
 
 Once our team determined our plan, we created a <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Storyboard Framework</a>. A sample image on the right.
-
-<img align="left" src="Dashboard/Analysis/dashboard.png" width="200">
 
 **2. Creating The Dashboard**
 
