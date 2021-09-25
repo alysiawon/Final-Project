@@ -39,9 +39,9 @@ By utilizing datasets from Kaggle, World Bank and Google, we were able to find o
 
 ### Entity Relationship Diagram (ERD)
 
-<img align="right" src="Database/2. ERD/erd-final.png" width="300">
-
 After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases the original datasets and the left showcases our final datasets we will use to build our model and how it links together. 
+
+<img align="right" src="Database/2. ERD/erd-final.png" width="300">
 
 As a result, the final two outputs that are created are:
 
