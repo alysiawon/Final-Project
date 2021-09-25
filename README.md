@@ -131,7 +131,7 @@ The dashboard will include utilizing Python, Javascript, HTML, CSS, Leaflet and 
 
 Once our team determined our plan, we created a <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Storyboard Framework</a>. A sample image on the right.
 
-<img align="right" src="Dashboard/Analysis/dashboard.png" width="250">
+<img align="left" src="Dashboard/Analysis/dashboard.png" width="200">
 
 **2. Creating The Dashboard**
 
