@@ -14,15 +14,13 @@
 
 The purpose of this project is to create an overview of the Olympic history and use that data to predict the number of gold medals a country could win. The project will consist of two elements:
 
-**Olympic History Dashboard**
+**1. Olympic History Dashboard:** The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
 
-The Olympic History Dashboard will provide a summary of each Olympic year and the number of gold medals they won. It will also showcase their GDP and population for that specific year. 
+**2.Gold Medal Predictor:**The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
 
-**Gold Medal Predictor**
+### Questions To Answer With The Data Source:
 
-The Gold Medal Predicator will predict the exact number of medals you will win depending on the estimated GDP and population of the country. 
-
-**Questions To Answer With The Data Source:** Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
+Based on the dataset, does population and GDP make a country more likely to win medals in Olympics?
 
 ## 2. Overview of Data & Database
 
