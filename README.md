@@ -6,7 +6,7 @@
 
 **Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is our final presentation.</a>
 
-**Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/index.html">Here is the draft of our dashboard.</a>
+**Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/index.html">Here is our dashboard.</a>
 
 ## 1. Overview of Project 
 
@@ -26,11 +26,11 @@ The Gold Medal Predicator will predict the exact number of medals you will win d
 
 In this project, we focus on using historic Olympic data and country data such as GDP and population to create the historic dashboard and the gold medal predictor. 
 
-<img align="right" src="Database/2. ERD/erd-process.png" width="450">
+<img align="right" src="Database/2. ERD/erd-process.png" width="300">
 
 ### Description of Datasets
 
-By utilizing Kaggle, World Bank and Google, we were able to find our datasets. The downloaded datasets are located in the <a href="Database/1. Datasets">Data folder</a>. Listed below is the links to the original datasets:
+By utilizing datasets from Kaggle, World Bank and Google, we were able to find our data. The downloaded datasets are located in the <a href="Database/1. Datasets">Data folder</a>. Listed below is the links to the original datasets:
 - <a href="https://www.kaggle.com/mysarahmadbhat/120-years-of-olympic-history">1896 to 2016 Olympic Data</a>
 - <a href="https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo">2020 Olympic Data</a>.
 - <a href="https://www.kaggle.com/themlphdstudent/countries-population-from-1955-to-2020">World Population</a>
@@ -38,19 +38,21 @@ By utilizing Kaggle, World Bank and Google, we were able to find our datasets. T
 - <a href="https://developers.google.com/public-data/docs/canonical/countries_csv">World Coordinates</a>
 
 ### Entity Relationship Diagram (ERD)
-After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases our final datasets we will use to build our model and the right showcases the original datasets and how it links together. 
+After searching for the data, our team created an <a href="Database/2. ERD">ERD Database</a>. In this ERD, it will showcase how our datasets link together to create our cleaned datasets. The left showcases the original datasets and the left showcases our final datasets we will use to build our model and how it links together. 
 
-As a result, the two outputs that are created are:
+As a result, the final two outputs that are created are:
+
 **1. Medals Data:** A list of gold medalist countries and their country data (GDP, population, coordinates)
-**2. Tokyo Data:** A list of 2020 gold medalist countries
 
-<img src="Database/2. ERD/erd-final.png" width="450">
+**2. Tokyo Data:** A list of the 2020 gold medalist countries
+
+<img align="right" src="Database/2. ERD/erd-final.png" width="450">
 
 ### Cleaned Data Source
 
-After planning how our data will link, our team worked on cleaning our datasets to create the final dataframe needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
+After planning how our data will link together, our team worked on cleaning our datasets to create the final dataframe needed for this project. The data cleaning process and final CSV files are located in the<a href="Database/3. Cleaned Data">cleaned data folder</a>.
 
-Our team utilized <a href="Database/3. Cleaned Data/medals.iypnb">Pandas</a> to clean the data, merge dataframes, reformat columns and data. 
+Our team utilized <a href="Database/3. Cleaned Data/medals.iypnb">Pandas</a> to clean the data, merge dataframes, reformat the columns and the data. 
 
 <img src="Database/3. Cleaned Data/Analysis/data-cleaning.png" width="450">
 
@@ -65,7 +67,6 @@ Our team created a local database application to store our data utilizing AWS, p
 The process we used to create a local database included:
 
 1. Creating an AWS RDS database and linked it to pgAdmin. 
-
 2. After linking it to pgAdmin, we were able to use SQL to link our clean data onto our local database.
 
 <img src="Database/4. SQL/pgadmin.png" width="450">
@@ -107,10 +108,6 @@ In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
 
-Here is our <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Storyboard</a> and a sample image on the right.
-
-<img align="right" src="Analysis/dashboard.png" width="250">
-
 ### Olympic Gold Medal Predictor
 
 The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
@@ -127,17 +124,25 @@ The purpose of this section is to let the user select a previous Olympic year an
 
 ### Process of Creating The Dashboard
 
-The dashboard will include utilizing Javascript, HTML, CSS, Leaflet and Plotly. 
+The dashboard will include utilizing Python, Javascript, HTML, CSS, Leaflet and Plotly. 
 
-**1. Scrape the Data**
+**1. Create the Framework**
 
-**2. Creating Database**
+Once our team determined our plan, we created a <a href="https://docs.google.com/presentation/d/1xsYqW0NIX3Om_aYEWKTWvCO6CjRhGKa_lj4cfL7tMfA/edit?usp=sharing">Dashboard Storyboard Framework</a>. A sample image on the right.
+
+<img align="right" src="Dashboard/Analysis/dashboard.png" width="250">
+
+**2. Creating The Dashboard**
 
 Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Logic Javascript File</a> and modify the <a href="Dashboard/index.html">HTML Index File</a>. 
 
-**3. Web Application**
+**3. Linking the Database and the Dashboard**
 
-<a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
+We linked the <a href="Dashbord/app.py">database application</a> to the dashboard and was able to run our system utilizing our local server. 
+
+**4. Web Application**
+
+Lastly we used <a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
 ## 5. Github
 
@@ -145,14 +150,10 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 
 ### Individual Branches
 - Alysia Won's Branch Name: alysia-won
-- Bala Banda's Branch Name: BalaBanda
 - Frank Sun's Branch Name: frank-sun
-- Steve Macpherson's Branch Name: smacpherson
 
 ### Github Layout
 In our Github repository, we have created the following folders:
-- <a href="Analysis">Analysis</a>: This consists of images and documnetation of our process. 
-- <a href="Dashboard">Dashboard</a>: This folder is used to create the dashboard utilizing techniques such as Javascript, CSS, and HTML.
-- <a href="Data">Data</a>: This folder consists of our cleaned data that was completed using Pandas and SQL, as well as our ERD diagram.
-- <a href="Resources">Resources</a>: This folder consists of the original datasets.
+- <a href="Dashboard">Dashboard</a>: This folder consists of the dashboard utilizing techniques such as Javascript, CSS, and HTML, as well as our database utilizing Pandas and Flask.
+- <a href="Database">Database</a>: This folder consists of the original datasets, the ERD draft, our cleaned dataset that was completed using Pandas, and our SQL queriers to set up the database.
 - <a href="Machine Learning">Machine Learning</a>: This folder consists of our Machine Learning diagram and framework.
