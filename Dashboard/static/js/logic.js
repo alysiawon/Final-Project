@@ -1,17 +1,56 @@
-// // The Data From medals.js
-// let countryData = countryTest;
 
-
-// let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals")
-// let countryData = d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((data) => {console.log(data)})
-// let tokyoData = d3.json("http://127.0.0.1:5000/api/v1.0/tokyo").then((data) => {console.log(data)})
-
-// // // ---------- Table For History ----------//
+// ---------- Table For Prediction ----------//
 
 // Build Table References 
-var tbody = d3.select("tbody");
+d3.select("#filter-btn-tokyo").on("click", calcMedeals);
 
-function buildTable(data) {
+var tbodyTokyo = d3.select("#tokyo-table-body");
+
+function buildTokyoTable(data) {
+  tbodyTokyo.html("");
+  // Next, loop through each object in the data
+  // and append a row and cells for each value in the row
+  data.forEach((dataRow) => {
+    // Append a row to the table body
+    let row = tbodyTokyo.append("tr");
+    // Loop through each field in the dataRow and add
+    // each value as a table cell (td)
+    Object.entries(dataRow).forEach(([key, val]) => {
+      if ((key != "latitude") & (key != "longitude")) {
+        let cell = row.append("td");
+        cell.text(val);
+      }
+    });
+  });
+}
+
+function mergeToTokyo(data, calculated){
+  return Object.assign(data, calculated);
+}
+
+function calcMedeals()
+{
+  var gdp = parseInt(d3.select("#gdp").property("value"));
+  console.log(gdp);
+  var population = parseInt(d3.select("#population").property("value"));
+  console.log(population);
+  var medals = parseInt(1.91822104*Math.pow(10, -12)*gdp + 1.01431335*Math.pow(10, -8)*population + 8.534067417575553).toFixed();
+  console.log(medals);
+
+  d3.json("http://127.0.0.1:5000/api/v1.0/tokyo/" + medals).then((filteredData) => {
+    console.log(filteredData);
+      filteredData = filteredData.sort((a, b) => a.rank - b.rank);
+  console.log(filteredData);
+  buildTokyoTable(filteredData);
+  })
+}
+
+// ---------- Table For History ----------//
+
+// Build Table References 
+var tbody = d3.select("#history-table-body");
+
+function buildHistoryTable(data) {
   tbody.html("");
   // Next, loop through each object in the data
   // and append a row and cells for each value in the row
@@ -51,8 +90,6 @@ function updateFilters() {
   else {
     delete filters[elementid]
   }
-
-  // var filteredData = countryData;
   
   d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((filteredData) => {
     Object.entries(filters)
@@ -62,7 +99,7 @@ function updateFilters() {
         .sort((a, b) => b.gold_medals - a.gold_medals);
     })
 
-  buildTable(filteredData);
+  buildHistoryTable(filteredData);
   filterChart(filteredData);
   buildMap(filteredData);
   })
@@ -70,7 +107,7 @@ function updateFilters() {
 }
 
 // Attach Event To Listen To Data
-d3.selectAll("input").on("change", updateFilters)
+d3.select("#filter-btn-medals").on("click", updateFilters);
 
 // // ---------- Bar Graph ----------//
 
@@ -167,5 +204,3 @@ function buildMap(data) {
 
   }
 }
-
-
