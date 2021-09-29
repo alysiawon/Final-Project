@@ -5,8 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    position: relative;
-
 }
 
 /* Header */
@@ -15,118 +13,121 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 55vh;
-    position: relative;
+    vertical-align: middle;
+
+    height: 80vh;
 }
 
 .banner-content{
     color: #000;
     width:50%;
-    padding-top:170px;
-    
+    padding-top:12.7vw;
+    position: relative;
+    vertical-align: middle;
+
 }
 
 .banner-content span{
-    font-size: 18px;
+    font-size: 1.2vw;
     font-weight:500;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 0.1vw;
 }
 
 .banner-content h2{
     color: #0085C7;
-    font-size: 60px;
+    font-size: 2.2vw;
     font-weight: 600; 
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    letter-spacing: 0.1vw;
+    margin-bottom: 0.5px;
 }
 
 .banner-content p{
     color: #000;
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
+    font-size: 0.6vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 1.6vw;
 }
 
 .banner-content .info-btn{
     text-decoration:none;
-    padding:10px 30px;
+    padding:0.6vw 1.0vw;
     background-color: #0085C7;
     color: #fff;
-    border: 2px;
-    font-size: 18px;
+    border: 0.2vw;
+    font-size: 0.8vw;
     font-weight: 600;
     font-style: bold;
 }
 
 .banner-content .info-btn:hover{
     background-color:#F4C300;
-    border:2px;
+    border:0.2vw;
 }
 
 /* Jumbotron */
 .jumbotron{
     width: 100%;
-    height: 18vh;
     text-align: center;
     text-transform: uppercase;
     position: relative;
+    vertical-align: middle;
 }
 
 .jumbotron h3{
     color: #000000;
-    font-size: 45px;
+    font-size: 1.5vw;
     font-weight: 600; 
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    letter-spacing: 0.1vw;
+    margin-bottom: 0.1vs;
 }
 
 .jumbotron p{
     color: #000;
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
+    font-size: 0.5vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 0.1vw;
 }
 
 /* Table */
 
 .historytable{
         border-collapse: collapse;
-        margin: 25 px 0;
+        margin: 2vw 0;
         font-size: 0.9em;
-        min-width: 480px;
-        border-radius: 5px 5px 0 0;
+        min-width: 40vw;
+        border-radius: 0.4vw 0.4vw 0 0;
         overflow: hidden;
-        height: 150px;
-        box-shadow: 00 20px rgba(0,0,0,0.15);
+        height: 12.5vw;
+        box-shadow: 00 0.7vw rgba(0,0,0,0.15);
     }
     tr{
-        padding: 12px 15px;
+        padding: 0.9vh 1vw;
         text-align: center;
-        border-bottom: 1px solid #dddddd;
+        border-bottom: 0.01vw solid #dddddd;
     }
     tr:nth-of-type(even){
         background-color:#f3f3f3;
     }
     tr:last-of-type{
-        border-bottom: 2px solid #F4C300;
+        border-bottom: 0.3vw solid #F4C300;
     }
     th {
-        padding: 12px 15px;
+        padding: 0.9vh 1vw;
         text-align: center;
         background-color: #F4C300;
         color: #ffffff;
         font-weight: bold
     }
     td {
-        padding: 12px 15px;
+        padding: 0.9vh 1vw;
     }
 
 .medalsscroll {
     overflow:scroll;
-    height:950px;
+    height:71.4vh;
 }
 
 .medalsscroll table {
@@ -135,7 +136,7 @@
 
 .tokyoscroll {
     overflow:scroll;
-    height:500px;
+    height:37.6vh;
 }
 
 .tokyoscroll table {
@@ -154,9 +155,9 @@ input {
     -moz-appearance: none;
     appearance: none;
     background: #f2f2f2;
-    padding:12px;
-    border-radius: 3px;
-    width: 250px;
+    padding:0.6vw;
+    border-radius: 0.4vw;
+    width: 9vw;
 }
 
 input:focus::placeholder {
@@ -171,13 +172,13 @@ input::placeholder {
 /* Button */
 .btn {
     text-decoration: none;
-    padding: 20px 50px;
+    padding: 1.5vh 7.6vw;
     font-size: 1.25rem;
     position: relative;
-    margin: 32px;
+    margin: 1.2vw;
     background: #0085C7;
     color: white;
-    border-radius: 10px;
+    border-radius: 1.5vw;
     transition: transform 0.3s ease;
 }
 
@@ -195,13 +196,13 @@ input::placeholder {
 
 /* Bar Plot */
 #bar-plot {
-    height: 1000px;
+    height: 75vh;
 }
 
 /* Bar Plot */
 #bubble {
-    height: 1000px;
+    height: 75vh;
 }
 
 /* Map */
-#mapid { height: 800px; }
+#mapid { height: 60vh; }
