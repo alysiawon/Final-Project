@@ -1,4 +1,3 @@
-
 // ---------- Table For Prediction ----------//
 
 // Build Table References 
@@ -16,11 +15,13 @@ function buildTokyoTable(data) {
     // Loop through each field in the dataRow and add
     // each value as a table cell (td)
     Object.entries(dataRow).forEach(([key, val]) => {
-      if ((key != "latitude") & (key != "longitude")) {
         let cell = row.append("td");
         cell.text(val);
-      }
     });
+  
+    if (dataRow["country_name"] == "Your Country") {
+      row.classed("highlight", true)
+    }
   });
 }
 
@@ -31,21 +32,34 @@ function mergeToTokyo(data, calculated){
 function calcMedeals()
 {
   var gdp = parseInt(d3.select("#gdp").property("value"));
-  console.log(gdp);
   var population = parseInt(d3.select("#population").property("value"));
-  console.log(population);
   var medals = parseInt(1.91822104*Math.pow(10, -12)*gdp + 1.01431335*Math.pow(10, -8)*population + 8.534067417575553).toFixed();
-  console.log(medals);
 
-  d3.json("http://127.0.0.1:5000/api/v1.0/tokyo/" + medals).then((filteredData) => {
-    console.log(filteredData);
+  d3.json("/api/v1.0/tokyo/" + medals).then((filteredData) => {
       filteredData = filteredData.sort((a, b) => a.rank - b.rank);
-  console.log(filteredData);
   buildTokyoTable(filteredData);
   })
 }
 
 // ---------- Table For History ----------//
+
+// Dropdown Menu
+
+function init() {
+  var selector = d3.select("#year");
+
+  d3.json("/api/v1.0/medals/").then((years) => {
+    years.forEach((year) => {
+      selector
+        .append("option")
+        .text(year)
+        .property("value", year);
+    });
+  })
+}
+
+init();
+
 
 // Build Table References 
 var tbody = d3.select("#history-table-body");
@@ -73,37 +87,16 @@ function buildHistoryTable(data) {
 // Create Filter
 var filters = {}
 function updateFilters() {
-  // Save the element, value and id of the changed value
-  var element = d3.select(this);
-  var elementvalue = element.property("value");
-  var elementid = element.attr("id");
-
-  // If Statement for year to be an integer
-  if (elementid = "year") {
-    elementvalue = parseInt(elementvalue)
-  }
-
-  // If Statement to add value to list or ignore 
-  if (elementvalue) {
-    filters[elementid] = elementvalue;
-  }
-  else {
-    delete filters[elementid]
-  }
-  
-  d3.json("http://127.0.0.1:5000/api/v1.0/medals").then((filteredData) => {
-    Object.entries(filters)
-    .forEach(([key, value]) => {
-      filteredData = filteredData.filter(row => row[key] === value)
-        .filter(medals => medals.gold_medals >= 1)
-        .sort((a, b) => b.gold_medals - a.gold_medals);
-    })
-
+  var year = parseInt(d3.select("#year").property("value"));
+  d3.json(`/api/v1.0/medals/` + year).then((filteredData) => {
   buildHistoryTable(filteredData);
-  filterChart(filteredData);
   buildMap(filteredData);
   })
 
+  var year = parseInt(d3.select("#year").property("value"));
+  d3.json(`/api/v1.0/graph/` + year).then((filteredData) => {
+  filterChart(filteredData);
+  })
 }
 
 // Attach Event To Listen To Data
@@ -113,13 +106,18 @@ d3.select("#filter-btn-medals").on("click", updateFilters);
 
 // Build Bar Graph with Filtered Data
 function filterChart(filteredData) {
+  var reverseMedals = filteredData.map(d => d.gold_medals).reverse()
+  var reverseCountry = filteredData.map(d => d.country_name).reverse()
+
   var filteredMedals = filteredData.map(d => d.gold_medals)
   var filteredCountry = filteredData.map(d => d.country_name)
+  var filteredPopulation = filteredData.map(d => d.population)
+  var filteredGDP = filteredData.map(d => d.gdp)
 
   // Bar Graph
   var trace = {
-    x: filteredMedals,
-    y: filteredCountry,
+    x: reverseMedals,
+    y: reverseCountry,
     type: 'bar',
     orientation: 'h'
   };
@@ -131,6 +129,30 @@ function filterChart(filteredData) {
   }
 
   Plotly.newPlot("bar-plot", chartData, layout)
+
+  // Bubble Chart
+
+  var bubbleData = [{
+    x: filteredPopulation,
+    y: filteredGDP,
+    text: filteredCountry,
+    mode: "markers",
+     marker: {
+       size: filteredMedals,
+       color: filteredMedals,
+       colorscale: "Portland" 
+     }
+  }];
+
+  var bubbleLayout = {
+    title: "Test",
+    xaxis: {title: "Population"},
+    yaxis: {title: "GDP"},
+    automargin: true,
+    hovermode: "closest"
+  };
+  
+  Plotly.newPlot("bubble", bubbleData, bubbleLayout)
 }
 
 // ---------- Map ----------//
@@ -178,10 +200,6 @@ function buildMap(data) {
     "Medals": mapMedals
   };
 
-  // Show Map
-  // L.control.layers(baseMaps, overlays).addTo(map);
-
-  // Legend
 
 
   // --- Map Set Up --- //

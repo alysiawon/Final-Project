@@ -38,22 +38,26 @@
     </head>
 
     <body>
-        <section>
-            <div class="content">
-                <div class="info">
-                    <h2>Header <br><span>Lower Header</span></h2>
-                    <p>From the lighting of the Olympic cauldron to the final fireworks of the Closing Ceremony, relive every medal, every hug, every heart-stopping finale of the Tokyo 2020 Olympic Games.</p>
-                    <a href="#" class="info-btn">More Info</a>
+        <div class="banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2><span>Explore The </span><br>Olympic Games</h2>
+                    <p>From the lighting of the Olympic cauldron to the final fireworks of the Closing Ceremony, learn more about the Olympic Games.</p>
+                    <a href="https://olympics.com/en/" class="info-btn">More Info</a>
                 </div>
             </div>
-        </section>
+        </div>
+
 
         <!----------------- MEDAL PREDICTOR ----------------->
         
         <!-- Intro -->
-        <div class="jumbotron" class="container-fluid">
-            <h1 class="display-4">Olympic Medal Predictor</h1>
-        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h3 class="display-4">Olympics Gold Medal Predictor</h3>
+              <p class="lead">Input your country's GDP and population andn learn where your country would rank.</p>
+            </div>
+          </div>
 
         <div class="container-fluid">
             <div class="row">
@@ -73,12 +77,12 @@
             <div class="row">
                 <div class="col-md-3">
                     <h3>Input Your Filters</h3>
-                    <form class="w3-container" style="background-color: #E8E4D6;" padding=20>
+                    <form class="w3-container" padding=20>
                         <ul>
                             <br>
                             <label for="number">Enter GDP</label>
                             <input type="number" placeholder=12345 value = 12345 id="gdp"/>
-                            <br>
+                            <br><br>
                             <label for="number">Enter Population</label>
                             <input type="number" placeholder="12345" value = 12345 id="population"/>
                             <button id="filter-btn-tokyo" type="button" class="btn btn-default">Predict Olympic Rank</button> 
@@ -89,68 +93,57 @@
                 <div class="col-md-9" >
 
                     <h3>Prediction Table</h3>
+                        <div class="scrollit">
                         <table id="tokyo">
                             <thead>
                                 <tr id="tokyo-table-row">
                                     <th>Rank</th>
                                     <th>Country Name</th>
                                     <th>Gold Medals</th>
-                            
-                                
                                 </tr>
                             </thead>
                             <tbody id="tokyo-table-body"></tbody>
                         </table>
+                        </div>
                 </div>
-
+        
         <!----------------- HISTORY ----------------->
 
         <!-- Intro -->
-        <div class="jumbotron">
-            <div class=container></div>
-            <h1 class="display-4">Olympic History</h1>
-        </div>
 
-
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h3 class="display-4">Olympics Gold Medal History</h3>
+              <p class="lead">Learn about the previous olympic games and how each country ranked.</p>
+            </div>
+          </div>
           <br>
         <!-- Input Button -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h3>Input Your Filters</h3>
-                    <form class="w3-container" style="background-color: #E8E4D6;" padding=20>
+                    <form class="w3-container" padding=20>
                         <ul>
-                            <br>
                             <label for="date">Enter Year</label>
-                            <input type="number" placeholder=2020 value = 2020 id="year" />
-                            <!-- <label for="country">Enter a Country</label>
-                            <input type="text" placeholder="Canada" id="country_name" />
-                            <br>
-                            <label for="country">Enter a 3 Letter Country Code</label>
-                            <input type="text" placeholder="CAN" id="country_code" /> -->
+                            <select id="year"></select>
                             <button id="filter-btn-medals" type="button" class="btn btn-default">Find Olympic Data</button> 
                         </ul>
                    </form>
                    <br>
-                   <div style="background-color: #E8E4D6;" padding=20>
-                        <h3>Olympic History <br><small>Small Text</small></h3>
-                        <p>
-                            INSERT TEXT
-                        </p>
-                   </div>
+
                 </div>
 
         <!-- Table -->
-                <div class="col-md-9" >
-
+                <div class="col-md-4" >
                     <h3>Olympic Table</h3>
+                    <div class="scrollit">
                     <table id="table-head">
                         <thead>
                             <tr id="history-table-row">
                                 <th>Year</th>
                                 <th>Country Name</th>
                                 <th>Country Code</th>
-                        
                                 <th>GDP</th>
                                 <th>Population</th>
                                 <th>Gold Medals</th>
@@ -158,19 +151,32 @@
                         </thead>
                         <tbody id="history-table-body"></tbody>
                     </table>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Bar Graph</h2>
+                    <div id="bar-plot"></div>
                 </div>
 
             </div>
         </div>
-        <br>
+        <br><br><br>
 
         <!-- Bar Graph -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <h2>Bar Graph</h2>
-                    <div id="bar-plot"></div>
+                <div class="col-md-6">
+                    <h3>World Map</h3>
+                    <div id='description'>Hover over thet data to find history of olympics.</div>
+                    <div id="mapid"></div>
                 </div>
+
+                <div class="col-md-6">
+                    <h2>Bubble Graph</h2>
+                    <div id="bubble"></div>
+                </div>
+
             </div>
         </div>    
 
@@ -180,11 +186,7 @@
         <!-- Map -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <h3>World Map</h3>
-                    <div id='description'>Hover over thet data to find history of olympics.</div>
-                    <div id="mapid"></div>
-                </div>
+
             </div>
         </div>    
 
