@@ -111,12 +111,17 @@ In our dashboard, we will be highlighting two key items:
 
 ### Olympic Gold Medal Predictor
 
+<img src="Dashboard/Analysis/gold-medal-predictor.gif" width="400">
+
 The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
 - How many medals will you win?
 - What would your rank be based on the 2020 Olympics?
 - A table to show where you would be ranked
 
 ### Olympic History
+
+<img src="Dashboard/Analysis/olympic-history.gif" width="400">
+
 
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
 - A table to show where you would be ranked
@@ -125,7 +130,7 @@ The purpose of this section is to let the user select a previous Olympic year an
 
 ### Process of Creating The Dashboard
 
-<img align="right" src="Dashboard/Analysis/dashboard.png" width="200">
+<img align="right" src="Dashboard/Analysis/dashboard-draft.png" width="200">
 
 The dashboard will include utilizing Python, Javascript, HTML, CSS, Leaflet and Plotly. 
 
@@ -143,9 +148,9 @@ We linked the <a href="Dashbord/app.py">database application</a> to the dashboar
 
 **4. Web Application**
 
-Lastly we used <a href="Dashboard/Templatesindex.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
+<img src="Dashboard/Analysis/dashboard.png" width="200">
 
-<img align="right" src="Dashboard/Analysis/dashboard-draft.png" width="200">
+Lastly we used <a href="Dashboard/Templatesindex.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
 ## 5. Github
 
