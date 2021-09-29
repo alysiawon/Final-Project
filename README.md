@@ -103,6 +103,8 @@ Using the following data sets 120 years of Olympics, worldwide GDP history and p
 
 ## 4. Dashboard
 
+<img src="Dashboard/Analysis/dashboard.png" width="800">
+
 In our dashboard, we will be highlighting two key items:
 1. Olympic Gold Medal Predictor
 2. Olympic History
@@ -144,8 +146,6 @@ Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Log
 We linked the <a href="Dashbord/app.py">database application</a> to the dashboard and was able to run our system utilizing our local server. 
 
 **4. Web Application**
-
-<img src="Dashboard/Analysis/dashboard.png" width="800">
 
 Lastly we used <a href="Dashboard/Templatesindex.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
 
