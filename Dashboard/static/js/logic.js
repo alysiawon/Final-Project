@@ -1,4 +1,4 @@
-// ---------- Table For Prediction ----------//
+// ---------- Gold Medal Prediction ----------//
 
 // Build Table References 
 d3.select("#filter-btn-tokyo").on("click", calcMedeals);
@@ -7,23 +7,19 @@ var tbodyTokyo = d3.select("#tokyo-table-body");
 
 function buildTokyoTable(data) {
   tbodyTokyo.html("");
-  // Next, loop through each object in the data
-  // and append a row and cells for each value in the row
   data.forEach((dataRow) => {
-    // Append a row to the table body
     let row = tbodyTokyo.append("tr");
-    // Loop through each field in the dataRow and add
-    // each value as a table cell (td)
     Object.entries(dataRow).forEach(([key, val]) => {
         let cell = row.append("td");
         cell.text(val);
     });
-  
     if (dataRow["country_name"] == "Your Country") {
       row.classed("highlight", true)
     }
   });
 }
+
+// Machine Learning
 
 function mergeToTokyo(data, calculated){
   return Object.assign(data, calculated);
@@ -41,10 +37,9 @@ function calcMedeals()
   })
 }
 
-// ---------- Table For History ----------//
+// ---------- Olympic History----------//
 
 // Dropdown Menu
-
 function init() {
   var selector = d3.select("#year");
 
@@ -59,7 +54,6 @@ function init() {
 }
 
 init();
-
 
 // Build Table References 
 var tbody = d3.select("#history-table-body");
@@ -82,9 +76,7 @@ function buildHistoryTable(data) {
   });
 }
 
-// ---------- Filter & Sorting ----------//
-
-// Create Filter
+// Filtering & Sorting
 var filters = {}
 function updateFilters() {
   var year = parseInt(d3.select("#year").property("value"));
@@ -102,9 +94,8 @@ function updateFilters() {
 // Attach Event To Listen To Data
 d3.select("#filter-btn-medals").on("click", updateFilters);
 
-// // ---------- Bar Graph ----------//
+// ---------- Graphs ----------//
 
-// Build Bar Graph with Filtered Data
 function filterChart(filteredData) {
   var reverseMedals = filteredData.map(d => d.gold_medals).reverse()
   var reverseCountry = filteredData.map(d => d.country_name).reverse()
@@ -167,20 +158,6 @@ function buildMap(data) {
     accessToken: API_KEY
   });
 
-  // Satellite Layer
-  let satelliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    accessToken: API_KEY
-  });
-
-  // Dark Layer
-  let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    accessToken: API_KEY
-  });
-
   // Initalize Map
   let map = L.map('mapid', {
     center: [0, 0],
@@ -188,7 +165,6 @@ function buildMap(data) {
     layers: [streets]
   });
 
-  
   // Plot Coordinates
   for (var i = 0; i < data.length; i++) {
     var countryName = data.map(d => d.country_name);
