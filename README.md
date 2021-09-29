@@ -111,7 +111,7 @@ In our dashboard, we will be highlighting two key items:
 
 ### Olympic Gold Medal Predictor
 
-<img src="Dashboard/Analysis/gold-medal-predictor.gif" width="400">
+<img src="Dashboard/Analysis/gold-medal-predictor.gif" width="700">
 
 The purpose of this section is to allow the user to input any GDP and/or population, and our machine learning system will populate:
 - How many medals will you win?
@@ -120,7 +120,7 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 
 ### Olympic History
 
-<img src="Dashboard/Analysis/olympic-history.gif" width="400">
+<img src="Dashboard/Analysis/olympic-history.gif" width="700">
 
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
 - A table to show where you would be ranked
