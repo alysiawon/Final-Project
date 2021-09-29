@@ -6,7 +6,7 @@
 
 **Presentation:** <a href="https://docs.google.com/presentation/d/11bAJcIVT26343fWd_sayFOkF_LyOCVCvcwEMoAe4qWE/edit#slide=id.g93969108f1_2_103">Here is our final presentation.</a>
 
-**Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/index.html">Here is our dashboard.</a>
+**Dashboard:** <a href="https://alysiawon.github.io/Final-Project/Dashboard/templates/index.html">Here is our dashboard.</a>
 
 ## 1. Overview of Project 
 
@@ -135,7 +135,7 @@ Once our team determined our plan, we created a <a href="https://docs.google.com
 
 **2. Creating The Dashboard**
 
-Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Logic Javascript File</a> and modify the <a href="Dashboard/index.html">HTML Index File</a>. 
+Javascript and HTML was used to create a <a href="Dashboard/static/logic.js">Logic Javascript File</a> and modify the <a href="Dashboard/Templates/index.html">HTML Index File</a>. 
 
 **3. Linking the Database and the Dashboard**
 
@@ -143,7 +143,9 @@ We linked the <a href="Dashbord/app.py">database application</a> to the dashboar
 
 **4. Web Application**
 
-Lastly we used <a href="Dashboard/index.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
+Lastly we used <a href="Dashboard/Templatesindex.html">HTML</a> and <a href="Dashboard/static/styles.css">CSS</a> was used to update our web application to make it mobile-responsive and to ensure it was easy to read and user-friendly.
+
+<img align="right" src="Dashboard/Analysis/dashboard-draft.png" width="200">
 
 ## 5. Github
 

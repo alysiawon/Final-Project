@@ -81,19 +81,17 @@
                         <ul>
                             <br>
                             <label for="number">Enter GDP</label>
-                            <input type="number" placeholder=12345 value = 12345 id="gdp"/>
+                            <input type="number" placeholder=00000 id="gdp"/>
                             <br><br>
                             <label for="number">Enter Population</label>
-                            <input type="number" placeholder="12345" value = 12345 id="population"/>
+                            <input type="number" placeholder=00000 id="population"/>
                             <button id="filter-btn-tokyo" type="button" class="btn btn-default">Predict Olympic Rank</button> 
                         </ul>
                    </form>
                    <br>
                 </div>
                 <div class="col-md-9" >
-
-                    <h3>Prediction Table</h3>
-                        <div class="scrollit">
+                        <div class="tokyoscroll">
                         <table id="tokyo">
                             <thead>
                                 <tr id="tokyo-table-row">
@@ -106,6 +104,8 @@
                         </table>
                         </div>
                 </div>
+            <br>
+
         
         <!----------------- HISTORY ----------------->
 
@@ -121,8 +121,7 @@
         <!-- Input Button -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
-                    <h3>Input Your Filters</h3>
+                <div class="col-md-12">
                     <form class="w3-container" padding=20>
                         <ul>
                             <label for="date">Enter Year</label>
@@ -131,13 +130,14 @@
                         </ul>
                    </form>
                    <br>
-
                 </div>
-
+            </div>
+        </div>
         <!-- Table -->
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-md-4" >
-                    <h3>Olympic Table</h3>
-                    <div class="scrollit">
+                    <div class="medalsscroll">
                     <table id="table-head">
                         <thead>
                             <tr id="history-table-row">
@@ -154,46 +154,31 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <h2>Bar Graph</h2>
+        <!-- Bar Graph -->
+                <div class="col-md-4">
                     <div id="bar-plot"></div>
                 </div>
 
+        <!-- Bubble Graph -->
+                <div class="col-md-4">
+                    <div id="bubble"></div>
+                </div>
             </div>
         </div>
         <br><br><br>
 
-        <!-- Bar Graph -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>World Map</h3>
-                    <div id='description'>Hover over thet data to find history of olympics.</div>
-                    <div id="mapid"></div>
-                </div>
-
-                <div class="col-md-6">
-                    <h2>Bubble Graph</h2>
-                    <div id="bubble"></div>
-                </div>
-
-            </div>
-        </div>    
-
-        <br>
-        <br>
-
         <!-- Map -->
         <div class="container-fluid">
             <div class="row">
-
+                <div class="col-md-12">
+                    <div id="mapid"></div>
+                </div>
             </div>
         </div>    
 
         <br>
         <br>
-        <br>
-        <br>
+
         
         <!-- Data -->
         <script src="app.py" type="module"></script>   

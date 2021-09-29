@@ -125,7 +125,8 @@ function filterChart(filteredData) {
   var chartData = [trace];
 
   var layout = {
-    title: "Top Medals By Country in Year"
+    title: "Top Medals By Country in Year",
+    xaxis: {title: "Gold Medals"},
   }
 
   Plotly.newPlot("bar-plot", chartData, layout)
@@ -145,7 +146,7 @@ function filterChart(filteredData) {
   }];
 
   var bubbleLayout = {
-    title: "Test",
+    title: "Medals Per Population and GDP",
     xaxis: {title: "Population"},
     yaxis: {title: "GDP"},
     automargin: true,
@@ -187,26 +188,9 @@ function buildMap(data) {
     layers: [streets]
   });
 
-  // Base Map
-  let baseMaps = {
-    "Streets": streets,
-    "Satellite": satelliteStreets,
-    "Dark": dark
-  };
-
-  // Layer
-  let mapMedals = new L.LayerGroup();
-  let overlays = {
-    "Medals": mapMedals
-  };
-
-
-
-  // --- Map Set Up --- //
-
+  
   // Plot Coordinates
   for (var i = 0; i < data.length; i++) {
-
     var countryName = data.map(d => d.country_name);
     var goldMedal = data.map(d => d.gold_medals);
     var gdp = data.map(d => d.gdp);
@@ -218,7 +202,6 @@ function buildMap(data) {
       "<b>Country Name: </b>" + countryName[i] +
       "<br><b>Number of Gold Medals: </b>" + goldMedal[i] +
       "<br><b>Population: </b>" + population[i] +
-      "<br><b>GDP: </b>" + gdp[i]).openPopup();
-
+      "<br><b>GDP: </b>" + gdp[i]);
   }
 }
