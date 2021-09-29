@@ -122,7 +122,6 @@ The purpose of this section is to allow the user to input any GDP and/or populat
 
 <img src="Dashboard/Analysis/olympic-history.gif" width="400">
 
-
 The purpose of this section is to let the user select a previous Olympic year and our system will populate:
 - A table to show where you would be ranked
 - A bar graph to visualize the table
